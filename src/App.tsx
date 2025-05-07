@@ -1,3 +1,5 @@
+import { CreditCard } from "./components/ui/CreditCard/CreditCard"
+import { Header } from "./components/ui/Header/Header"
 
 
 function App() {
@@ -5,7 +7,8 @@ function App() {
 
   return (
     <div>
-    {/* Acá empieza la app. */}
+    <Header/>
+    <CreditCard/>
     </div>
   )
 }
