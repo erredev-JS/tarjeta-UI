@@ -1,0 +1,45 @@
+.transactionsContainer{
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 5px;
+    overflow-y: auto;
+}
+
+.container{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.card{
+    display: flex;
+    background-color: rgb(164, 164, 189);
+    padding: 5px;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.cardText{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: left;
+}
+.cardText p:last-of-type{
+    color: rgb(224, 214, 214);
+}
+.date{
+    padding: 2px;
+    width: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    word-spacing: 10px;
+    color: red;
+}

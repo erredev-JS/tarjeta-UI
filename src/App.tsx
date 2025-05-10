@@ -1,14 +1,15 @@
-import { CreditCard } from "./components/ui/CreditCard/CreditCard"
-import { Header } from "./components/ui/Header/Header"
+import { LatestTransactionsScreen } from "./components/screens/LatestTransactionsScreen/LatestTransactionsScreen"
+import { PaymentsModal } from "./components/ui/PaymentsModal/PaymentsModal"
+import useModalStore from "./store/modalStore"
 
 
 function App() {
 
-
+  const {isVisible} = useModalStore()
   return (
     <div>
-    <Header/>
-    <CreditCard/>
+      <LatestTransactionsScreen/>
+      {isVisible && <PaymentsModal/>}
     </div>
   )
 }
