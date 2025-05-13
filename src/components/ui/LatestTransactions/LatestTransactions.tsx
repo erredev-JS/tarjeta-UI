@@ -1,8 +1,11 @@
 import useModalStore from '../../../store/modalStore';
+import usePaymentStore from '../../../store/paymentStore';
 import style from './LatestTransactions.module.css'
 export const LatestTransactions = () => {
+
   const {setIsVisible} = useModalStore()
 
+  const {setActivePayment} = usePaymentStore()
   const upcomingPayments = [
     {
       date: 'JUN 7',
@@ -33,7 +36,10 @@ export const LatestTransactions = () => {
         Latest Transactions
         <div className={style.transactionsContainer}>
           {upcomingPayments.map((payment) => (
-            <div className={style.card} onClick={() => setIsVisible()}>
+            <div className={style.card} onClick={() => {
+              setIsVisible()
+              setActivePayment(payment)
+            }}>
               <div className={style.date}>{payment.date}</div>
               <div className={style.cardText}>
               <p>{payment.merchant}</p>

@@ -1,17 +1,17 @@
 import {create} from 'zustand'
 import { IPayment } from '../types/IPayment'
 
-interface IModalStore  {
+interface IPaymentStore  {
     activePayment: IPayment | null,
-    setActivePayment: () => void
+    setActivePayment: (payment : IPayment) => void
     unsetActivePayment: () => void
 }
 
-const usePaymentStore = create<IModalStore> ((set) => ({
+const usePaymentStore = create<IPaymentStore> ((set) => ({
     activePayment: null,
-    setIsVisible: () => set (() => ({isVisible: true})),
-    setNotVisible: () => set (() => ({isVisible: false}))
+    setActivePayment: (payment) => set (() => ({activePayment: payment})),
+    unsetActivePayment: () => set (() => ({activePayment: null}))
     
 }))
 
-export default useModalStore
+export default usePaymentStore

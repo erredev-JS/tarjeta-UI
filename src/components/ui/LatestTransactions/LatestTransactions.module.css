@@ -24,6 +24,12 @@
     border-radius: 5px;
 }
 
+.card:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 500ms ease all;
+}
+
 .cardText{
     display: flex;
     flex-direction: column;
